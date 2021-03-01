@@ -8,6 +8,6 @@ Pod::Spec.new do |s|
   }
   s.source = { :git => 'https://github.com/Purushothaman22/GeneratedPodCheck.git' }
   s.ios.deployment_target = '11.0'
-
+  s.source_files = '*/*.swift'
   s.swift_versions = ['5.0', '5.1', '5.2']
 end
