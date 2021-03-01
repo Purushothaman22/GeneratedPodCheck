@@ -1,0 +1,76 @@
+name: DiaryRpc
+fileGroups: [
+  Assets,
+  HomeScreen,
+]
+
+configs:
+  Debug: debug
+  Release: release
+
+schemes:
+  DiaryRpc:
+    build:
+      targets:
+        Assets: All
+        Assets: [run, analyze, test, profile]
+        HomeScreen: All
+        HomeScreen: [run, analyze, test, profile]
+    run:
+      config: Debug
+    archive:
+      config: Release
+    test:
+      config: Debug
+
+
+  Assets:
+    build:
+      targets:
+        Assets: [run, analyze, test, profile]
+    run:
+      config: Debug
+    archive:
+      config: Release
+    test:
+      config: Debug
+
+  HomeScreen:
+    build:
+      targets:
+        HomeScreen: [run, analyze, test, profile]
+    run:
+      config: Debug
+    archive:
+      config: Release
+    test:
+      config: Debug
+
+
+targets:
+  Assets:
+    type: framework
+    platform: iOS
+    deploymentTarget: "11.0"
+    sources:
+      - path: Assets/Sources
+        buildPhase: sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: "com.suryadigital.leoSwiftRPCExample.assets"
+        INFOPLIST_FILE: Assets/Info.plist
+
+  HomeScreen:
+    type: framework
+    platform: iOS
+    deploymentTarget: "11.0"
+    sources:
+      - path: HomeScreen/Sources
+        buildPhase: sources
+    dependencies:
+      - target: Assets
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: "com.suryadigital.leoSwiftRPCExample.homeScreen"
+        INFOPLIST_FILE: HomeScreen/Info.plist
+
