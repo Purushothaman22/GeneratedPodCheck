@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
     'Surya Software Systems Pvt. Ltd.' => 'noreply@surya-soft.com'
   }
   s.source = { :git => 'https://github.com/Purushothaman22/GeneratedPodCheck.git' }
-  s.source_files = '*/*.swift'
+  s.source_files = '**/*.swift'
   s.ios.deployment_target = '11.0'
   s.swift_versions = ['5.0', '5.1', '5.2']
 end
