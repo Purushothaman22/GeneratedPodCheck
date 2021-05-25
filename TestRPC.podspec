@@ -7,10 +7,24 @@ Pod::Spec.new do |s|
     'Surya Software Systems Pvt. Ltd.' => 'noreply@surya-soft.com'
   }
   s.source = { :git => 'https://github.com/Purushothaman22/GeneratedPodCheck.git' }
-  s.source_files = '**/*.swift'
   s.ios.deployment_target = '11.0'
   s.swift_versions = ['5.0', '5.1', '5.2']
   s.dependency 'libPhoneNumber-iOS'
   s.dependency 'Sedwig'
   s.dependency 'LeoSwiftRuntime'
+
+  s.subspec 'Auth' do |sp|
+    sp.source_files = 'Auth/**/*.swift'
+  end
+  s.subspec 'Otp' do |sp|
+    sp.source_files = 'Otp/**/*.swift'
+    sp.dependency 'TestRPC/types'
+  end
+  s.subspec 'Sms' do |sp|
+    sp.source_files = 'Sms/**/*.swift'
+    sp.dependency 'TestRPC/types'
+  end
+  s.subspec 'types' do |sp|
+    sp.source_files = 'types/**/*.swift'
+  end
 end
