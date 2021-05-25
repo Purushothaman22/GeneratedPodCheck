@@ -1,0 +1,52 @@
+PODS:
+  - LeoSwiftRuntime (0.1.0):
+    - libPhoneNumber-iOS
+    - Sedwig
+  - libPhoneNumber-iOS (0.9.15)
+  - RxSwift (6.1.0)
+  - Sedwig (0.1.0):
+    - Sedwig/AsyncAPIClientCombine (= 0.1.0)
+    - Sedwig/AsyncAPIClientRx (= 0.1.0)
+    - Sedwig/CoreAPIClient (= 0.1.0)
+    - Sedwig/SyncAPIClient (= 0.1.0)
+  - Sedwig/AsyncAPIClientCombine (0.1.0):
+    - Sedwig/CoreAPIClient
+  - Sedwig/AsyncAPIClientRx (0.1.0):
+    - RxSwift
+    - Sedwig/CoreAPIClient
+  - Sedwig/CoreAPIClient (0.1.0)
+  - Sedwig/SyncAPIClient (0.1.0):
+    - Sedwig/CoreAPIClient
+
+DEPENDENCIES:
+  - "LeoSwiftRuntime (from `git@github.com:surya-soft/LeoSwiftRuntime.git`)"
+  - "Sedwig (from `git@github.com:surya-soft/Sedwig.git`)"
+
+SPEC REPOS:
+  trunk:
+    - libPhoneNumber-iOS
+    - RxSwift
+
+EXTERNAL SOURCES:
+  LeoSwiftRuntime:
+    :git: "git@github.com:surya-soft/LeoSwiftRuntime.git"
+  Sedwig:
+    :git: "git@github.com:surya-soft/Sedwig.git"
+
+CHECKOUT OPTIONS:
+  LeoSwiftRuntime:
+    :commit: bd91e55a7a96a528635e7c374fb5c087e8136140
+    :git: "git@github.com:surya-soft/LeoSwiftRuntime.git"
+  Sedwig:
+    :commit: 37e57cbfa7586439fd7c558c61cd40b2633f0097
+    :git: "git@github.com:surya-soft/Sedwig.git"
+
+SPEC CHECKSUMS:
+  LeoSwiftRuntime: 95c1854e8b746df58b543519d712764cfee5c9e0
+  libPhoneNumber-iOS: 0a32a9525cf8744fe02c5206eb30d571e38f7d75
+  RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
+  Sedwig: 6892a5ff356ee3cec32fc7b21824741d0e1fcdf8
+
+PODFILE CHECKSUM: 90cbebf9768676d84ff34d0b0b425db1781b3e51
+
+COCOAPODS: 1.10.0

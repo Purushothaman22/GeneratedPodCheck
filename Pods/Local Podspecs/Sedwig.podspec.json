@@ -1,0 +1,62 @@
+{
+  "name": "Sedwig",
+  "version": "0.1.0",
+  "summary": "A barebones HTTP library written in Swift.",
+  "homepage": "https://github.com/surya-soft/Sedwig",
+  "authors": {
+    "Surya Software Systems Pvt. Ltd.": "noreply@surya-soft.com"
+  },
+  "source": {
+    "git": "https://github.com/surya-soft/Sedwig.git"
+  },
+  "platforms": {
+    "ios": "11.0",
+    "osx": "10.12",
+    "tvos": "11.0",
+    "watchos": "3.0"
+  },
+  "swift_versions": [
+    "5.0",
+    "5.1",
+    "5.2"
+  ],
+  "subspecs": [
+    {
+      "name": "CoreAPIClient",
+      "source_files": "Sources/CoreAPIClient/**/*.swift"
+    },
+    {
+      "name": "SyncAPIClient",
+      "source_files": [
+        "Sources/SyncAPIClient/**/*.swift"
+      ],
+      "dependencies": {
+        "Sedwig/CoreAPIClient": [
+
+        ]
+      }
+    },
+    {
+      "name": "AsyncAPIClientRx",
+      "source_files": "Sources/AsyncAPIClientRx/**/*.swift",
+      "dependencies": {
+        "Sedwig/CoreAPIClient": [
+
+        ],
+        "RxSwift": [
+
+        ]
+      }
+    },
+    {
+      "name": "AsyncAPIClientCombine",
+      "source_files": "Sources/AsyncAPIClientCombine/**/*.swift",
+      "dependencies": {
+        "Sedwig/CoreAPIClient": [
+
+        ]
+      }
+    }
+  ],
+  "swift_version": "5.2"
+}

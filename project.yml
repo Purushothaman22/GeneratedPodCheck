@@ -1,7 +1,9 @@
-name: DiaryRpc
+name: TestRpc
 fileGroups: [
-  Assets,
-  HomeScreen,
+  Auth,
+  Otp,
+  Sms,
+  Types,
 ]
 
 configs:
@@ -9,13 +11,17 @@ configs:
   Release: release
 
 schemes:
-  DiaryRpc:
+  TestRpc:
     build:
       targets:
-        Assets: All
-        Assets: [run, analyze, test, profile]
-        HomeScreen: All
-        HomeScreen: [run, analyze, test, profile]
+        Auth: All
+        Auth: [run, analyze, test, profile]
+        Otp: All
+        Otp: [run, analyze, test, profile]
+        Sms: All
+        Sms: [run, analyze, test, profile]
+        Types: All
+        Types: [run, analyze, test, profile]
     run:
       config: Debug
     archive:
@@ -24,10 +30,10 @@ schemes:
       config: Debug
 
 
-  Assets:
+  Auth:
     build:
       targets:
-        Assets: [run, analyze, test, profile]
+        Auth: [run, analyze, test, profile]
     run:
       config: Debug
     archive:
@@ -35,10 +41,32 @@ schemes:
     test:
       config: Debug
 
-  HomeScreen:
+  Otp:
     build:
       targets:
-        HomeScreen: [run, analyze, test, profile]
+        Otp: [run, analyze, test, profile]
+    run:
+      config: Debug
+    archive:
+      config: Release
+    test:
+      config: Debug
+
+  Sms:
+    build:
+      targets:
+        Sms: [run, analyze, test, profile]
+    run:
+      config: Debug
+    archive:
+      config: Release
+    test:
+      config: Debug
+
+  Types:
+    build:
+      targets:
+        Types: [run, analyze, test, profile]
     run:
       config: Debug
     archive:
@@ -48,29 +76,53 @@ schemes:
 
 
 targets:
-  Assets:
+  Auth:
     type: framework
     platform: iOS
     deploymentTarget: "11.0"
     sources:
-      - path: Assets/Sources
+      - path: Auth/Sources
         buildPhase: sources
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: "com.suryadigital.leoSwiftRPCExample.assets"
-        INFOPLIST_FILE: Assets/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: "com.suryadigital.leoSwiftRPCExample.auth"
+        INFOPLIST_FILE: Auth/Info.plist
 
-  HomeScreen:
+  Otp:
     type: framework
     platform: iOS
     deploymentTarget: "11.0"
     sources:
-      - path: HomeScreen/Sources
+      - path: Otp/Sources
         buildPhase: sources
     dependencies:
-      - target: Assets
+      - target: Types
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: "com.suryadigital.leoSwiftRPCExample.homeScreen"
-        INFOPLIST_FILE: HomeScreen/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: "com.suryadigital.leoSwiftRPCExample.otp"
+        INFOPLIST_FILE: Otp/Info.plist
+
+  Sms:
+    type: framework
+    platform: iOS
+    deploymentTarget: "11.0"
+    sources:
+      - path: Sms/Sources
+        buildPhase: sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: "com.suryadigital.leoSwiftRPCExample.sms"
+        INFOPLIST_FILE: Sms/Info.plist
+
+  Types:
+    type: framework
+    platform: iOS
+    deploymentTarget: "11.0"
+    sources:
+      - path: Types/Sources
+        buildPhase: sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: "com.suryadigital.leoSwiftRPCExample.types"
+        INFOPLIST_FILE: Types/Info.plist
 

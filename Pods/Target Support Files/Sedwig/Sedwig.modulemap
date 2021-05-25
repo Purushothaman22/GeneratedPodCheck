@@ -1,0 +1,6 @@
+framework module Sedwig {
+  umbrella header "Sedwig-umbrella.h"
+
+  export *
+  module * { export * }
+}

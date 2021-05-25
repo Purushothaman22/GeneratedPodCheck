@@ -1,14 +1,26 @@
 platform :ios, '11.0'
 
 
-target 'Assets' do
-    pod 'libPhoneNumber-iOS', :modular_headers => true
+target 'Auth' do
+    use_frameworks! :linkage => :static 
     pod 'Sedwig', :git => 'git@github.com:surya-soft/Sedwig.git'
     pod 'LeoSwiftRuntime', :git => 'git@github.com:surya-soft/LeoSwiftRuntime.git'
 end
 
-target 'HomeScreen' do
-    pod 'libPhoneNumber-iOS', :modular_headers => true
+target 'Otp' do
+    use_frameworks! :linkage => :static 
+    pod 'Sedwig', :git => 'git@github.com:surya-soft/Sedwig.git'
+    pod 'LeoSwiftRuntime', :git => 'git@github.com:surya-soft/LeoSwiftRuntime.git'
+end
+
+target 'Sms' do
+    use_frameworks! :linkage => :static 
+    pod 'Sedwig', :git => 'git@github.com:surya-soft/Sedwig.git'
+    pod 'LeoSwiftRuntime', :git => 'git@github.com:surya-soft/LeoSwiftRuntime.git'
+end
+
+target 'Types' do
+    use_frameworks! :linkage => :static 
     pod 'Sedwig', :git => 'git@github.com:surya-soft/Sedwig.git'
     pod 'LeoSwiftRuntime', :git => 'git@github.com:surya-soft/LeoSwiftRuntime.git'
 end
