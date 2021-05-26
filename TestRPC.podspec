@@ -18,13 +18,13 @@ Pod::Spec.new do |s|
   end
   s.subspec 'Otp' do |sp|
     sp.source_files = 'Otp/**/*.swift'
-    sp.dependency 'TestRPC/types'
+    sp.dependency 'TestRPC/Types'
   end
   s.subspec 'Sms' do |sp|
     sp.source_files = 'Sms/**/*.swift'
-    sp.dependency 'TestRPC/types'
+    sp.dependency 'TestRPC/Types'
   end
-  s.subspec 'types' do |sp|
-    sp.source_files = 'types/**/*.swift'
+  s.subspec 'Types' do |sp|
+    sp.source_files = 'Types/**/*.swift'
   end
 end
